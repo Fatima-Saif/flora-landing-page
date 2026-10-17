@@ -1,0 +1,60 @@
+.navbar {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.navbar-pill {
+  display: flex;
+  gap: 100px;
+  padding: 80px 140px; /* Even taller and wider */
+/*   background: rgba(255, 255, 255, 0.45);
+ */  backdrop-filter: blur(20px);
+  border-radius: 200px; /* Very rounded pill */
+  border: 1px ;
+  pointer-events: auto;
+}
+
+.nav-item {
+  display: inline-block;
+  text-decoration: none;
+  color: #8d4a4a;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem; /* Larger font */
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.nav-item:first-child {
+  margin-left: 60px; /* Big margin on the left for Home */
+  padding-left: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 60px; /* Big margin on the right for Contact */
+  padding-right: 20px;
+}
+
+.nav-item:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .navbar-pill {
+    gap: 20px;
+    padding: 10px 25px;
+  }
+  .nav-item {
+    font-size: 0.8rem;
+  }
+}
